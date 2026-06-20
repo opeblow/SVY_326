@@ -17,9 +17,9 @@ Usage:
 
 import pandas as pd
 
-from src.transform import sweep_angles, save_all_results, format_results_table
-from src.visualize import generate_all_plots
 from src.rotation_matrices import composite_matrix
+from src.transform import format_results_table, save_all_results, sweep_angles
+from src.visualize import generate_all_plots
 
 # ---------------------------------------------------------------------------
 # Test vectors in the HA frame  [X, Y, Z]_HA

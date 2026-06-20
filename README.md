@@ -63,7 +63,17 @@ Where:
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
+├── SECURITY.md
+├── pyproject.toml
 ├── main.py
+├── .github/
+│   ├── CODE_OF_CONDUCT.md
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   └── workflows/
+│       └── ci.yml
 ├── src/
 │   ├── __init__.py
 │   ├── rotation_matrices.py
@@ -85,11 +95,18 @@ Where:
 
 | Path | Description |
 |------|-------------|
-| `.gitignore` | Ignored file patterns (venv, __pycache__, etc.) |
+| `.gitignore` | Ignored file patterns |
 | `LICENSE` | MIT license |
 | `README.md` | Project documentation |
 | `requirements.txt` | Python dependencies |
+| `SECURITY.md` | Security policy and vulnerability reporting |
+| `pyproject.toml` | Project config (ruff linter, pytest) |
 | `main.py` | Entry point: runs the full pipeline |
+| `.github/CODE_OF_CONDUCT.md` | Contributor Covenant v2.1 |
+| `.github/PULL_REQUEST_TEMPLATE.md` | PR checklist and template |
+| `.github/ISSUE_TEMPLATE/bug_report.md` | Bug report form |
+| `.github/ISSUE_TEMPLATE/feature_request.md` | Feature request form |
+| `.github/workflows/ci.yml` | GitHub Actions CI (test + lint) |
 | `src/__init__.py` | Package initialiser |
 | `src/rotation_matrices.py` | Rz(180), Ry(90-phi), and composite matrix |
 | `src/transform.py` | Point transformation and angle sweep |
@@ -168,19 +185,23 @@ Note: The Y component remains zero for this particular test vector because the i
 
 ## Contributing
 
-Contributions are welcome.  To contribute:
+Contributions are welcome.  Please see [`CONTRIBUTING.md`](#contributing) below
+for the full workflow.  In short:
 
 1. Fork the repository.
 2. Create a feature branch (`git checkout -b feature/my-change`).
 3. Install the dev environment (`pip install -r requirements.txt`).
-4. Run the existing tests to confirm a clean baseline (`pytest tests/ -v`).
-5. Make your changes and add or update tests as needed.
-6. Run the full test suite again and confirm all tests pass.
-7. Commit and push your branch, then open a pull request.
+4. Run the existing tests and linter to confirm a clean baseline
+   (`pytest tests/ -v && ruff check .`).
+5. Make your changes, keeping code and documentation emoji-free.
+6. Run the full test suite and linter again; confirm all pass.
+7. Commit, push, and open a pull request using
+   [the pull-request template](.github/PULL_REQUEST_TEMPLATE.md).
 
-This project follows the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html).
-Please keep code emoji-free, use descriptive names, and include type hints and
-docstrings on all public functions.
+This project follows the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
+and uses [ruff](https://docs.astral.sh/ruff/) for linting.  All
+contributors are expected to adhere to the
+[Code of Conduct](.github/CODE_OF_CONDUCT.md).
 
 ## How to Cite
 

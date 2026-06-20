@@ -7,7 +7,7 @@ matrix, orthogonality, and determinant properties.
 import numpy as np
 import pytest
 
-from src.rotation_matrices import rz_180, ry_90_minus_phi, composite_matrix
+from src.rotation_matrices import composite_matrix, ry_90_minus_phi, rz_180
 from src.transform import transform_point
 
 
