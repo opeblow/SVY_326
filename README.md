@@ -54,31 +54,48 @@ Where:
 
 ## Project Structure
 
-```
+```text
 .
-  .gitignore                    Ignored file patterns (venv, __pycache__, etc.)
-  README.md                     This file
-  requirements.txt              Python dependencies
-  main.py                       Entry point: runs the full pipeline
-  src/
-    __init__.py                 Package initialiser
-    rotation_matrices.py        Rz(180), Ry(90-phi), and composite matrix
-    transform.py                Point transformation and angle sweep
-    visualize.py                Plotting routines (four figures)
-  tests/
-    __init__.py
-    test_rotation.py            Pytest unit tests with known analytic values
-  data/
-    results.txt                 Formatted sweep results for all test vectors
-  graphs/
-    plot1_3d_path.png           3D scatter / line of the rotated path
-    plot2_xyz_vs_phi_separate.png  X, Y, Z components vs phi (subplots)
-    plot3_sine_cosine_comparison.png  Continuous trig curves + discrete samples
-    plot4_xyz_overlay.png       X, Y, Z overlay on a single axes
-  assets/
-    logo.svg                    Geometric logo representing frame rotation
-  venv/                         (virtual environment, not tracked)
+├── .gitignore
+├── README.md
+├── requirements.txt
+├── main.py
+├── src/
+│   ├── __init__.py
+│   ├── rotation_matrices.py
+│   ├── transform.py
+│   └── visualize.py
+├── tests/
+│   ├── __init__.py
+│   └── test_rotation.py
+├── data/
+│   └── results.txt
+├── graphs/
+│   ├── plot1_3d_path.png
+│   ├── plot2_xyz_vs_phi_separate.png
+│   ├── plot3_sine_cosine_comparison.png
+│   └── plot4_xyz_overlay.png
+└── assets/
+    └── logo.svg
 ```
+
+| Path | Description |
+|------|-------------|
+| `.gitignore` | Ignored file patterns (venv, __pycache__, etc.) |
+| `README.md` | Project documentation |
+| `requirements.txt` | Python dependencies |
+| `main.py` | Entry point: runs the full pipeline |
+| `src/__init__.py` | Package initialiser |
+| `src/rotation_matrices.py` | Rz(180), Ry(90-phi), and composite matrix |
+| `src/transform.py` | Point transformation and angle sweep |
+| `src/visualize.py` | Plotting routines (four figures) |
+| `tests/test_rotation.py` | Pytest unit tests with known analytic values |
+| `data/results.txt` | Formatted sweep results for all three test vectors |
+| `graphs/plot1_3d_path.png` | 3D scatter / line of the rotated path |
+| `graphs/plot2_xyz_vs_phi_separate.png` | X, Y, Z components vs phi (subplots) |
+| `graphs/plot3_sine_cosine_comparison.png` | Continuous trig curves + discrete samples |
+| `graphs/plot4_xyz_overlay.png` | X, Y, Z overlay on a single axes |
+| `assets/logo.svg` | Geometric logo representing frame rotation |
 
 ## Installation
 
