@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="56" fill="#f4f6f9" stroke="#1f3a5f" stroke-width="2"/>
+
+  <!-- Z-axis (vertical) -->
+  <line x1="60" y1="88" x2="60" y2="20" stroke="#1f3a5f" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Z label -->
+  <text x="56" y="16" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1f3a5f">Z</text>
+
+  <!-- X-axis (bottom-right direction) -->
+  <line x1="60" y1="88" x2="94" y2="98" stroke="#1f3a5f" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- X label -->
+  <text x="96" y="103" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1f3a5f">X</text>
+
+  <!-- Y-axis (bottom-left direction) -->
+  <line x1="60" y1="88" x2="26" y2="98" stroke="#1f3a5f" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Y label -->
+  <text x="14" y="103" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1f3a5f">Y</text>
+
+  <!-- Origin point -->
+  <circle cx="60" cy="88" r="3" fill="#e63946"/>
+
+  <!-- Rotation arc indicator around Y-axis (curved arrow) -->
+  <path d="M 72 72 Q 88 68 90 52" fill="none" stroke="#e63946" stroke-width="2" stroke-linecap="round"/>
+  <!-- Arrowhead -->
+  <polygon points="90,52 85,58 91,59" fill="#e63946"/>
+
+  <!-- Phi label -->
+  <text x="76" y="70" font-family="Arial, sans-serif" font-size="9" font-style="italic" fill="#e63946">phi</text>
+
+  <!-- Title text -->
+  <text x="60" y="116" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#1f3a5f">Eq. 2-28</text>
+</svg>

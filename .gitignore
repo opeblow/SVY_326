@@ -1,0 +1,15 @@
+# Virtual environment
+venv/
+
+
+# Python cache
+__pycache__/
+
+# Pytest
+.pytest_cache/
+*.pytest_cache/
+
+# Matplotlib cache
+.matplotlib/
+
+
