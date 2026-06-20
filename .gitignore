@@ -1,15 +1,29 @@
 # Virtual environment
 venv/
-
+.env/
 
 # Python cache
 __pycache__/
+*.py[cod]
+*$py.class
 
 # Pytest
 .pytest_cache/
-*.pytest_cache/
+
+# Ruff / linting
+.ruff_cache/
+.mypy_cache/
 
 # Matplotlib cache
 .matplotlib/
 
+# IDE / editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
+# OS files
+Thumbs.db
+.DS_Store

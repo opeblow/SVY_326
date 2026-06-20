@@ -6,14 +6,14 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/python-3.10%2B-blue" alt="Python 3.10+">
-  <img src="https://img.shields.io/badge/license-MIT-green" alt="License MIT">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="License MIT"></a>
   <img src="https://img.shields.io/badge/tests-pytest%20passing-brightgreen" alt="Tests Passing">
-  <img src="https://img.shields.io/badge/code%20style-Google-4285F4" alt="Google Python Style">
+  <a href="https://google.github.io/styleguide/pyguide.html"><img src="https://img.shields.io/badge/code%20style-Google-4285F4" alt="Google Python Style"></a>
   <img src="https://img.shields.io/badge/numpy-%3E%3D1.24-013243" alt="NumPy">
   <img src="https://img.shields.io/badge/matplotlib-%3E%3D3.7-11557C" alt="Matplotlib">
 </p>
 
-A clean, professional Python implementation of Equation 2-28 from the SVY 326 (Geodesy and Surveying) curriculum.  The equation describes a composite 3D rotation that transforms a coordinate vector from the HA (horizon-astronomic) frame to the H (horizon) frame via a constant 180-degree rotation about the Z-axis followed by a rotation of (90 - phi) degrees about the Y-axis.  The project sweeps the angle parameter phi from 0 to 360 degrees, visualises the results in four publication-quality plots, and includes a full suite of unit tests.
+A clean, professional Python implementation of Equation 2-28 from the SVY 326 (Geodesy and Surveying) coursework.  The equation describes a composite 3D rotation that transforms a coordinate vector from the HA (horizon-astronomic) frame to the H (horizon) frame via a constant 180-degree rotation about the Z-axis followed by a rotation of (90 - phi) degrees about the Y-axis.  The project sweeps the angle parameter phi from 0 to 360 degrees, visualises the results in four publication-quality plots, and includes a full suite of unit tests.
 
 ## Table of Contents
 
@@ -25,6 +25,9 @@ A clean, professional Python implementation of Equation 2-28 from the SVY 326 (G
 - [Testing](#testing)
 - [Output](#output)
 - [Sample Results](#sample-results)
+- [Contributing](#contributing)
+- [How to Cite](#how-to-cite)
+- [Acknowledgments](#acknowledgments)
 - [License](#license)
 - [Author](#author)
 
@@ -57,6 +60,7 @@ Where:
 ```text
 .
 ├── .gitignore
+├── LICENSE
 ├── README.md
 ├── requirements.txt
 ├── main.py
@@ -82,6 +86,7 @@ Where:
 | Path | Description |
 |------|-------------|
 | `.gitignore` | Ignored file patterns (venv, __pycache__, etc.) |
+| `LICENSE` | MIT license |
 | `README.md` | Project documentation |
 | `requirements.txt` | Python dependencies |
 | `main.py` | Entry point: runs the full pipeline |
@@ -161,10 +166,42 @@ Results for test vector (1, 0, 0)_HA swept from 0 to 45 degrees:
 
 Note: The Y component remains zero for this particular test vector because the input vector (1, 0, 0) is orthogonal to the Y-axis and the composite rotation only introduces Y components for vectors with a non-zero Y input.  For the (1,0,0) test vector the analytic result is X = -sin(phi), Y = 0, Z = -cos(phi).
 
+## Contributing
+
+Contributions are welcome.  To contribute:
+
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/my-change`).
+3. Install the dev environment (`pip install -r requirements.txt`).
+4. Run the existing tests to confirm a clean baseline (`pytest tests/ -v`).
+5. Make your changes and add or update tests as needed.
+6. Run the full test suite again and confirm all tests pass.
+7. Commit and push your branch, then open a pull request.
+
+This project follows the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html).
+Please keep code emoji-free, use descriptive names, and include type hints and
+docstrings on all public functions.
+
+## How to Cite
+
+If you reference this implementation in academic or professional work:
+
+> Bolatito, M. O. (2026). SVY 326 -- Equation 2-28: 3D Coordinate Rotation
+> Sweep (Version 1.0). GitHub. https://github.com/opeblow/SVY_326
+
+## Acknowledgments
+
+This project was developed as part of the SVY 326 (Geodesy and Surveying)
+coursework.  It implements Equation 2-28 from the course curriculum, which
+describes a composite 3D rotation transforming coordinates from the HA
+(horizon-astronomic) frame to the H (horizon) frame.  The implementation
+was built with NumPy for matrix computation, Matplotlib for visualisation,
+and pytest for unit testing.
+
 ## License
 
 Distributed under the MIT License.  See `LICENSE` for more information.
 
 ## Author
 
-Developed for SVY 326 -- Geodesy and Surveying.
+**MOBOLAJI OPEYEMI BOLATITO** -- SVY 326 -- Geodesy and Surveying.
