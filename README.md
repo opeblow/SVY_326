@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="svy326_rotation/assets/logo.svg" alt="Project logo" width="120">
+  <img src="assets/logo.svg" alt="Project logo" width="120">
 </p>
 
 <h1 align="center">SVY 326 -- Equation 2-28: 3D Coordinate Rotation Sweep</h1>
@@ -59,25 +59,25 @@ Where:
   .gitignore                    Ignored file patterns (venv, __pycache__, etc.)
   README.md                     This file
   requirements.txt              Python dependencies
-  svy326_rotation/
-    venv/                       (virtual environment, already active)
-    src/
-      __init__.py               Package initialiser
-      rotation_matrices.py      Rz(180), Ry(90-phi), and composite matrix
-      transform.py              Point transformation and angle sweep
-      visualize.py              Plotting routines (four figures)
-    tests/
-      test_rotation.py          Pytest unit tests with known analytic values
-    data/
-      results.txt               Formatted sweep results for all test vectors
-    graphs/
-      plot1_3d_path.png         3D scatter / line of the rotated path
-      plot2_xyz_vs_phi_separate.png  X, Y, Z components vs phi (subplots)
-      plot3_sine_cosine_comparison.png  Continuous trig curves + discrete samples
-      plot4_xyz_overlay.png     X, Y, Z overlay on a single axes
-    assets/
-      logo.svg                  Geometric logo representing frame rotation
-    main.py                     Entry point: runs the full pipeline
+  main.py                       Entry point: runs the full pipeline
+  src/
+    __init__.py                 Package initialiser
+    rotation_matrices.py        Rz(180), Ry(90-phi), and composite matrix
+    transform.py                Point transformation and angle sweep
+    visualize.py                Plotting routines (four figures)
+  tests/
+    __init__.py
+    test_rotation.py            Pytest unit tests with known analytic values
+  data/
+    results.txt                 Formatted sweep results for all test vectors
+  graphs/
+    plot1_3d_path.png           3D scatter / line of the rotated path
+    plot2_xyz_vs_phi_separate.png  X, Y, Z components vs phi (subplots)
+    plot3_sine_cosine_comparison.png  Continuous trig curves + discrete samples
+    plot4_xyz_overlay.png       X, Y, Z overlay on a single axes
+  assets/
+    logo.svg                    Geometric logo representing frame rotation
+  venv/                         (virtual environment, not tracked)
 ```
 
 ## Installation
@@ -88,18 +88,11 @@ The virtual environment is already activated.  To install dependencies:
 pip install -r requirements.txt
 ```
 
-Then navigate into the project directory:
-
-```bash
-cd svy326_rotation/
-```
-
 ## Usage
 
-Run the full pipeline from the `svy326_rotation/` directory:
+Run the full pipeline from the project root:
 
 ```bash
-cd svy326_rotation/
 python main.py
 ```
 
@@ -116,7 +109,6 @@ This will:
 Run the unit test suite with pytest:
 
 ```bash
-cd svy326_rotation/
 pytest tests/ -v
 ```
 
